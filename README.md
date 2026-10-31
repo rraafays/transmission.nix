@@ -4,4 +4,4 @@ BitTorrent via Transmission: RPC, peer firewall, `downloads` group, and download
 
 NixOS only. Requires `./common`. Independent of slskd (Soulseek); the host may point both at the same path.
 
-Enable with `services.transmissionClient.enable = true`.
+Import `./src/transmission` in `configuration.nix` to activate. Opt out with `services.transmissionClient.enable = false` or remove the import.

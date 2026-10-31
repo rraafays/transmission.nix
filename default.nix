@@ -11,7 +11,11 @@ let
 in
 {
   options.services.transmissionClient = {
-    enable = lib.mkEnableOption "Transmission BitTorrent client";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Transmission BitTorrent client stack.";
+    };
     downloadPath = lib.mkOption {
       type = lib.types.str;
       default = "/away/main/Downloads";
